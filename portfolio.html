@@ -8,130 +8,80 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
-  scroll-behavior:smooth;
-}
-
 body{
-  background: linear-gradient(135deg,#020617,#0f172a);
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:#0f172a;
   color:white;
 }
 
-/* HERO */
-.hero{
+header{
   text-align:center;
-  padding:70px 20px 40px;
+  padding:40px 20px;
+  background:#1e293b;
 }
 
-.hero h1{
-  font-size:40px;
-  background:linear-gradient(90deg,#38bdf8,#a78bfa);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-
-/* SECTION */
 .section{
-  max-width:1000px;
+  max-width:900px;
   margin:30px auto;
-  padding:30px;
-  background:rgba(255,255,255,0.05);
-  border-radius:15px;
-  backdrop-filter:blur(10px);
-  box-shadow:0 10px 25px rgba(0,0,0,0.4);
-  transition:.3s;
-}
-
-.section:hover{
-  transform:translateY(-5px);
+  padding:25px;
+  background:#1e293b;
+  border-radius:12px;
 }
 
 h2{
   color:#38bdf8;
-  margin-bottom:15px;
+  margin-bottom:10px;
 }
 
-/* SKILLS */
-.skills span, .tools span{
+.skills span{
   display:inline-block;
-  padding:8px 16px;
+  background:#0ea5e9;
   margin:6px;
+  padding:6px 14px;
   border-radius:20px;
-  background:#38bdf8;
-  color:#020617;
-  font-weight:500;
 }
 
-/* PROJECT CARDS */
-.projects{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-}
-
-.card{
-  background:rgba(255,255,255,0.05);
-  padding:20px;
-  border-radius:12px;
-  transition:.3s;
-}
-
-.card:hover{
-  transform:scale(1.05);
-}
-
-.card strong{
-  font-size:18px;
+.project{
+  margin-bottom:15px;
 }
 
 .btn{
   display:inline-block;
-  margin-top:10px;
-  padding:8px 16px;
-  border-radius:20px;
+  margin-top:15px;
+  padding:12px 22px;
   background:#38bdf8;
-  color:#020617;
+  color:white;
+  border-radius:8px;
   text-decoration:none;
-  font-size:14px;
+  font-weight:500;
+  transition:.3s;
 }
 
-/* EXPERIENCE */
-.exp-item{
-  margin-bottom:12px;
+.btn:hover{
+  transform:scale(1.05);
 }
 
-/* CONTACT */
-.contact a{
-  color:#38bdf8;
-  text-decoration:none;
-}
-
-/* FOOTER */
 footer{
   text-align:center;
-  padding:30px;
-  opacity:.6;
+  margin:30px 0;
+  opacity:.7;
 }
 </style>
 </head>
 
 <body>
 
-<div class="hero">
-  <h1>My Portfolio</h1>
-  <p>Creating clean, modern & user-friendly digital experiences</p>
-</div>
+<header>
+  <h1>Sharanya M</h1>
+  <p>Frontend Developer & UI/UX Enthusiast</p>
+</header>
 
 <div class="section">
   <h2>About Me</h2>
   <p>
-    I am a Computer Science & Design student passionate about frontend
-    development and UI/UX design. I enjoy creating responsive,
-    user-friendly interfaces and solving real-world problems using technology.
+    I am a Computer Science & Design student passionate about frontend development,
+    UI/UX design, and building clean, user-friendly digital experiences.
   </p>
 </div>
 
@@ -142,66 +92,49 @@ footer{
     <span>CSS</span>
     <span>JavaScript</span>
     <span>Flutter</span>
-    <span>UI/UX Design</span>
-    <span>Responsive Design</span>
-  </div>
-</div>
-
-<div class="section">
-  <h2>Tools & Technologies</h2>
-  <div class="tools">
-    <span>VS Code</span>
     <span>Figma</span>
     <span>GitHub</span>
-    <span>Firebase</span>
-    <span>Canva</span>
   </div>
 </div>
 
 <div class="section">
-  <h2>Featured Projects</h2>
+  <h2>Projects</h2>
 
-  <div class="projects">
-
-    <div class="card">
-      <strong>💊 DrugLens</strong>
-      <p>Medicine awareness application promoting safe drug usage.</p>
-      <a href="#" class="btn">View Project</a>
-    </div>
-
-    <div class="card">
-      <strong>🌿 Medicinal Plant Identifier</strong>
-      <p>Identifies medicinal plants using uploaded images.</p>
-      <a href="#" class="btn">View Project</a>
-    </div>
-
-    <div class="card">
-      <strong>🛒 eCommerce App</strong>
-      <p>Mobile shopping application with product browsing & cart features.</p>
-      <a href="#" class="btn">View Project</a>
-    </div>
-
+  <div class="project">
+    <strong>💊 DrugLens</strong>
+    <p>Medicine awareness application promoting safe drug usage.</p>
   </div>
+
+  <div class="project">
+    <strong>🌿 Medicinal Plant Identifier</strong>
+    <p>Identifies medicinal plants using uploaded images.</p>
+  </div>
+
 </div>
 
 <div class="section">
   <h2>Experience</h2>
-  <div class="exp-item">✔ Built responsive UI projects using HTML, CSS & JavaScript</div>
-  <div class="exp-item">✔ Developed mobile apps using Flutter</div>
-  <div class="exp-item">✔ Designed UI prototypes using Figma</div>
+  <p>✔ Built responsive UI projects using HTML & CSS</p>
+  <p>✔ Developed mobile apps using Flutter</p>
+  <p>✔ Designed UI prototypes using Figma</p>
 </div>
 
 <div class="section">
   <h2>Resume</h2>
   <p>You can download my resume below:</p>
-  <a href="resume.pdf" class="btn">Download Resume</a>
+
+  <!-- IMPORTANT DOWNLOAD LINK -->
+  <a href="./resume.pdf" download class="btn">
+    Download Resume
+  </a>
+
 </div>
 
-<div class="section contact">
+<div class="section">
   <h2>Contact</h2>
   <p>Email: sharanya5325@gmail.com</p>
-  <p>GitHub: <a href="#">https://github.com/SharanyaM2005</a></p>
-  <p>LinkedIn: <a href="#">linkdin:www.linkedin.com/in/sharanya-m-b9514532b</a></p>
+  <p>GitHub: <a href="https://github.com/SharanyaM2005" target="_blank">SharanyaM2005</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/sharanya-m-b9514532b" target="_blank">View Profile</a></p>
 </div>
 
 <footer>
@@ -209,5 +142,5 @@ footer{
 </footer>
 
 </body>
-
 </html>
+
