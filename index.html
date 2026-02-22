@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sharanya M</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background: radial-gradient(circle at top,#0f172a,#020617);
+  color:white;
+  overflow:hidden;
+}
+
+/* glowing background blobs */
+body::before,
+body::after{
+  content:"";
+  position:absolute;
+  width:350px;
+  height:350px;
+  border-radius:50%;
+  filter:blur(160px);
+  opacity:.6;
+}
+
+body::before{
+  background:#38bdf8;
+  top:-100px;
+  left:-100px;
+}
+
+body::after{
+  background:#a78bfa;
+  bottom:-100px;
+  right:-100px;
+}
+
+/* main card */
+.container{
+  position:relative;
+  display:flex;
+  align-items:center;
+  gap:40px;
+  padding:40px;
+  border-radius:20px;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(15px);
+  box-shadow:0 10px 40px rgba(0,0,0,0.4);
+  animation:fadeIn 1.5s ease;
+}
+
+/* profile image */
+.profile-img{
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  overflow:hidden;
+  border:4px solid #38bdf8;
+  box-shadow:0 0 25px #38bdf8;
+  transition:.4s;
+}
+
+.profile-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.profile-img:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 40px #a78bfa;
+}
+
+/* text section */
+.text h1{
+  font-size:42px;
+  background:linear-gradient(90deg,#38bdf8,#a78bfa);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.text p{
+  opacity:.85;
+  margin-top:8px;
+}
+
+/* button */
+button{
+  margin-top:20px;
+  padding:12px 30px;
+  border:none;
+  border-radius:30px;
+  background:#38bdf8;
+  color:#020617;
+  font-weight:600;
+  cursor:pointer;
+  transition:.3s;
+}
+
+button:hover{
+  transform:scale(1.08);
+  box-shadow:0 0 20px #38bdf8;
+}
+
+/* animation */
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(40px)}
+  to{opacity:1; transform:translateY(0)}
+}
+
+/* mobile responsive */
+@media(max-width:768px){
+  .container{
+    flex-direction:column;
+    text-align:center;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="profile-img">
+    <img src="d:\Coding\Collage Projects\portfolio\profile.jpg.jpeg" alt="Sharanya">
+  </div>
+
+  <div class="text">
+    <h1>Sharanya M</h1>
+    <p>Frontend Developer & UI/UX Enthusiast</p>
+    <p>Designing modern & user-friendly experiences</p>
+
+    <button onclick="location.href='portfolio.html'">
+      View Portfolio →
+    </button>
+  </div>
+
+</div>
+
+</body>
+</html>
