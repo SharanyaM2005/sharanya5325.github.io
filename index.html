@@ -1,125 +1,1664 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sharanya M</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+<title>Sharanya M | UI/UX Designer</title>
 
-<style>
+<meta name="description"
+content="Portfolio of Sharanya M - UI/UX Designer and Frontend Developer">
 
-body{
-  margin:0;
-  height:100vh;
-  font-family:'Poppins',sans-serif;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  background: linear-gradient(-45deg,#6366f1,#06b6d4,#9333ea,#ec4899);
-  background-size:400% 400%;
-  animation:gradient 10s ease infinite;
-}
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
-@keyframes gradient{
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
-}
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-.container{
-  display:flex;
-  align-items:center;
-  gap:40px;
-  padding:40px;
-  border-radius:20px;
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(15px);
-  box-shadow:0 10px 40px rgba(0,0,0,0.4);
-  color:white;
-  animation:fadeIn 1.5s ease;
-}
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-@keyframes fadeIn{
-  from{opacity:0; transform:translateY(20px)}
-  to{opacity:1; transform:translateY(0)}
-}
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
 
-/* profile image */
-.profile-img{
-  width:180px;
-  height:180px;
-  border-radius:50%;
-  overflow:hidden;
-  border:4px solid #38bdf8;
-  box-shadow:0 0 30px #38bdf8;
-  flex-shrink:0;
-}
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-.profile-img img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-}
+<link rel="stylesheet" href="style.css">
 
-.text h1{
-  margin:0;
-  font-size:42px;
-}
-
-.text p{
-  margin:8px 0;
-  opacity:.9;
-  font-size:18px;
-}
-
-button{
-  margin-top:18px;
-  padding:12px 28px;
-  border:none;
-  border-radius:30px;
-  background:white;
-  color:#6d28d9;
-  font-size:16px;
-  cursor:pointer;
-  transition:.3s;
-}
-
-button:hover{
-  transform:scale(1.1);
-}
-
-/* mobile */
-@media(max-width:700px){
-  .container{
-    flex-direction:column;
-    text-align:center;
-  }
-}
-
-</style>
 </head>
 
 <body>
 
-<div class="container">
+<!--================ PRELOADER ================-->
 
-  <div class="profile-img">
-    <img src="profile.jpg" alt="Sharanya">
-  </div>
+<div id="preloader">
 
-  <div class="text">
-    <h1>Sharanya M</h1>
-    <p>Frontend Developer & UI/UX Enthusiast</p>
-    <p>Designing modern & user-friendly experiences</p>
-
-    <button onclick="location.href='portfolio.html'">
-      View Portfolio →
-    </button>
-  </div>
+<div class="loader"></div>
 
 </div>
 
+<!--================ BACKGROUND ================-->
+
+<div class="background">
+
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+
+</div>
+
+<!--================ NAVBAR ================-->
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+
+Sharanya<span>.</span>
+
+</div>
+
+<ul class="nav-menu">
+
+<li><a href="#home">Home</a></li>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#skills">Skills</a></li>
+
+<li><a href="#projects">Projects</a></li>
+
+<li><a href="#experience">Experience</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+<div class="menu-btn">
+
+<i class="fas fa-bars"></i>
+
+</div>
+
+</nav>
+
+</header>
+
+<!--================ HERO SECTION ================-->
+
+<section class="hero" id="home">
+
+<div class="hero-text" data-aos="fade-right">
+
+<h3>Hello 👋 I'm</h3>
+
+<h1>Sharanya M</h1>
+
+<h2>
+
+<span class="typing"></span>
+
+</h2>
+
+<p>
+
+Passionate Computer Science & Design student who enjoys
+creating beautiful, user-friendly and meaningful digital
+experiences through UI/UX Design and Frontend Development.
+
+Currently looking for UI/UX Design Internship and
+Full-Time Opportunities.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#projects" class="btn">
+
+View My Work
+
+</a>
+
+<a href="resume.pdf" download class="btn2">
+
+Download Resume
+
+</a>
+
+</div>
+
+<div class="social">
+
+<a href="https://github.com/SharanyaM2005" target="_blank">
+
+<i class="fab fa-github"></i>
+
+</a>
+
+<a href="https://linkedin.com/in/sharanya-m-b9514532b" target="_blank">
+
+<i class="fab fa-linkedin"></i>
+
+</a>
+
+<a href="mailto:sharanya5325@gmail.com">
+
+<i class="fa-solid fa-envelope"></i>
+
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-image" data-aos="fade-left">
+
+<div class="image-card">
+
+<img src="portfolio.png" alt="Sharanya M">
+
+</div>
+
+<div class="available">
+
+<i class="fa-solid fa-circle"></i>
+
+Available for Internship
+
+</div>
+
+</div>
+
+</section>
+<!-- ================= ABOUT ================= -->
+
+<section class="about" id="about">
+
+<div class="container">
+
+<div class="section-heading" data-aos="fade-up">
+
+<h5>ABOUT ME</h5>
+
+<h2>Turning Ideas into Beautiful Digital Experiences</h2>
+
+<p>
+I am a Computer Science and Design undergraduate at
+Srinivas Institute of Technology with a strong passion for
+UI/UX Design and Frontend Development.
+
+I enjoy designing user-centered interfaces that are simple,
+modern, responsive and visually engaging. My goal is to
+work as a UI/UX Designer where I can solve real-world
+problems through thoughtful design and continuously learn
+from experienced professionals.
+</p>
+
+</div>
+
+<div class="about-wrapper">
+
+<div class="about-left" data-aos="fade-right">
+
+<div class="about-card">
+
+<h3>Personal Information</h3>
+
+<div class="info">
+
+<p><strong>Name</strong></p>
+
+<span>Sharanya M</span>
+
+</div>
+
+<div class="info">
+
+<p><strong>Email</strong></p>
+
+<span>sharanya5325@gmail.com</span>
+
+</div>
+
+<div class="info">
+
+<p><strong>Phone</strong></p>
+
+<span>+91 8547961678</span>
+
+</div>
+
+<div class="info">
+
+<p><strong>Location</strong></p>
+
+<span>Kerala, India</span>
+
+</div>
+
+<div class="info">
+
+<p><strong>Degree</strong></p>
+
+<span>B.E Computer Science & Design</span>
+
+</div>
+
+<div class="info">
+
+<p><strong>CGPA</strong></p>
+
+<span>8.51 / 10</span>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="about-right" data-aos="fade-left">
+
+<div class="glass-card">
+
+<h3>Career Objective</h3>
+
+<p>
+
+I aspire to build intuitive digital products that combine
+beautiful interfaces with meaningful user experiences.
+
+I am seeking a UI/UX Design Internship or an Entry-Level
+UI/UX Designer role where I can contribute to real-world
+projects while growing as a product designer.
+
+</p>
+
+</div>
+
+<div class="glass-card">
+
+<h3>My Strengths</h3>
+
+<ul>
+
+<li>✔ Creative Problem Solving</li>
+
+<li>✔ User-Centered Design Thinking</li>
+
+<li>✔ Fast Learner</li>
+
+<li>✔ Team Collaboration</li>
+
+<li>✔ Attention to Detail</li>
+
+<li>✔ Responsive Web Design</li>
+
+<li>✔ Frontend Development</li>
+
+<li>✔ Strong Communication Skills</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= STATS ================= -->
+
+<section class="stats">
+
+<div class="container">
+
+<div class="stat-box" data-aos="zoom-in">
+
+<h2>8+</h2>
+
+<p>Projects Completed</p>
+
+</div>
+
+<div class="stat-box" data-aos="zoom-in" data-aos-delay="100">
+
+<h2>4+</h2>
+
+<p>Professional Certifications</p>
+
+</div>
+
+<div class="stat-box" data-aos="zoom-in" data-aos-delay="200">
+
+<h2>1</h2>
+
+<p>Internship Experience</p>
+
+</div>
+
+<div class="stat-box" data-aos="zoom-in" data-aos-delay="300">
+
+<h2>8.51</h2>
+
+<p>Current CGPA</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= WHY HIRE ME ================= -->
+
+<section class="hire">
+
+<div class="container">
+
+<div class="section-heading">
+
+<h5>WHY HIRE ME?</h5>
+
+<h2>What Makes Me Different?</h2>
+
+</div>
+
+<div class="hire-grid">
+
+<div class="hire-card" data-aos="fade-up">
+
+<i class="fa-solid fa-palette"></i>
+
+<h3>UI/UX Design</h3>
+
+<p>
+
+Designing clean, user-friendly interfaces with Figma,
+wireframes, prototypes and design systems.
+
+</p>
+
+</div>
+
+<div class="hire-card" data-aos="fade-up" data-aos-delay="100">
+
+<i class="fa-solid fa-code"></i>
+
+<h3>Frontend Development</h3>
+
+<p>
+
+Skilled in HTML, CSS, JavaScript and React,
+helping bridge the gap between design and development.
+
+</p>
+
+</div>
+
+<div class="hire-card" data-aos="fade-up" data-aos-delay="200">
+
+<i class="fa-solid fa-lightbulb"></i>
+
+<h3>Creative Thinking</h3>
+
+<p>
+
+I enjoy solving real-world problems through
+thoughtful design and innovative ideas.
+
+</p>
+
+</div>
+
+<div class="hire-card" data-aos="fade-up" data-aos-delay="300">
+
+<i class="fa-solid fa-users"></i>
+
+<h3>Team Collaboration</h3>
+
+<p>
+
+Comfortable working with designers, developers
+and mentors while continuously learning.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ================= SKILLS ================= -->
+
+<section class="skills" id="skills">
+
+<div class="container">
+
+<div class="section-heading" data-aos="fade-up">
+
+<h5>MY SKILLS</h5>
+
+<h2>Design • Develop • Create</h2>
+
+<p>
+These are the technologies and tools I use to create
+beautiful and functional digital experiences.
+</p>
+
+</div>
+
+<div class="skills-grid">
+
+<!-- UI UX -->
+
+<div class="skill-card" data-aos="fade-up">
+
+<div class="icon">
+
+<i class="fa-solid fa-pencil-ruler"></i>
+
+</div>
+
+<h3>UI / UX Design</h3>
+
+<div class="progress">
+
+<div class="progress-fill uiux">
+
+<span>95%</span>
+
+</div>
+
+</div>
+
+<p>
+
+Wireframing • Prototyping • Design Systems
+
+User Flow • User Research
+
+</p>
+
+</div>
+
+<!-- FIGMA -->
+
+<div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+
+<div class="icon">
+
+<i class="fa-brands fa-figma"></i>
+
+</div>
+
+<h3>Figma</h3>
+
+<div class="progress">
+
+<div class="progress-fill figma">
+
+<span>95%</span>
+
+</div>
+
+</div>
+
+<p>
+
+Auto Layout
+
+Components
+
+Interactive Prototype
+
+High Fidelity Design
+
+</p>
+
+</div>
+
+<!-- HTML -->
+
+<div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+
+<div class="icon">
+
+<i class="fa-brands fa-html5"></i>
+
+</div>
+
+<h3>HTML5</h3>
+
+<div class="progress">
+
+<div class="progress-fill html">
+
+<span>95%</span>
+
+</div>
+
+</div>
+
+<p>
+
+Semantic HTML
+
+Accessibility
+
+Responsive Layout
+
+</p>
+
+</div>
+
+<!-- CSS -->
+
+<div class="skill-card" data-aos="fade-up">
+
+<div class="icon">
+
+<i class="fa-brands fa-css3-alt"></i>
+
+</div>
+
+<h3>CSS3</h3>
+
+<div class="progress">
+
+<div class="progress-fill css">
+
+<span>92%</span>
+
+</div>
+
+</div>
+
+<p>
+
+Flexbox
+
+Grid
+
+Animations
+
+Glassmorphism
+
+</p>
+
+</div>
+
+<!-- JAVASCRIPT -->
+
+<div class="skill-card" data-aos="fade-up">
+
+<div class="icon">
+
+<i class="fa-brands fa-js"></i>
+
+</div>
+
+<h3>JavaScript</h3>
+
+<div class="progress">
+
+<div class="progress-fill js">
+
+<span>85%</span>
+
+</div>
+
+</div>
+
+<p>
+
+DOM
+
+API
+
+ES6
+
+Interactive Websites
+
+</p>
+
+</div>
+
+<!-- REACT -->
+
+<div class="skill-card" data-aos="fade-up">
+
+<div class="icon">
+
+<i class="fa-brands fa-react"></i>
+
+</div>
+
+<h3>React</h3>
+
+<div class="progress">
+
+<div class="progress-fill react">
+
+<span>80%</span>
+
+</div>
+
+</div>
+
+<p>
+
+Components
+
+Hooks
+
+Responsive UI
+
+</p>
+
+</div>
+
+<!-- PYTHON -->
+
+<div class="skill-card" data-aos="fade-up">
+
+<div class="icon">
+
+<i class="fa-brands fa-python"></i>
+
+</div>
+
+<h3>Python</h3>
+
+<div class="progress">
+
+<div class="progress-fill python">
+
+<span>88%</span>
+
+</div>
+
+</div>
+
+<p>
+
+Flask
+
+Automation
+
+AI Projects
+
+Gemini API
+
+</p>
+
+</div>
+
+<!-- FLUTTER -->
+
+<div class="skill-card" data-aos="fade-up">
+
+<div class="icon">
+
+<i class="fa-solid fa-mobile-screen-button"></i>
+
+</div>
+
+<h3>Flutter</h3>
+
+<div class="progress">
+
+<div class="progress-fill flutter">
+
+<span>75%</span>
+
+</div>
+
+</div>
+
+<p>
+
+Cross Platform
+
+Mobile UI
+
+Responsive Apps
+
+</p>
+
+</div>
+
+<!-- AWS -->
+
+<div class="skill-card" data-aos="fade-up">
+
+<div class="icon">
+
+<i class="fa-brands fa-aws"></i>
+
+</div>
+
+<h3>AWS Cloud</h3>
+
+<div class="progress">
+
+<div class="progress-fill aws">
+
+<span>80%</span>
+
+</div>
+
+</div>
+
+<p>
+
+Cloud
+
+Deployment
+
+Data Engineering
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= TOOLS ================= -->
+
+<section class="tools">
+
+<div class="container">
+
+<div class="section-heading">
+
+<h5>TOOLS I USE</h5>
+
+<h2>Daily Workflow</h2>
+
+</div>
+
+<div class="tools-grid">
+
+<div class="tool-card">
+
+<i class="fa-brands fa-figma"></i>
+
+<p>Figma</p>
+
+</div>
+
+<div class="tool-card">
+
+<i class="fa-brands fa-github"></i>
+
+<p>GitHub</p>
+
+</div>
+
+<div class="tool-card">
+
+<i class="fa-solid fa-code"></i>
+
+<p>VS Code</p>
+
+</div>
+
+<div class="tool-card">
+
+<i class="fa-solid fa-database"></i>
+
+<p>MongoDB</p>
+
+</div>
+
+<div class="tool-card">
+
+<i class="fa-solid fa-server"></i>
+
+<p>Flask</p>
+
+</div>
+
+<div class="tool-card">
+
+<i class="fa-brands fa-react"></i>
+
+<p>React</p>
+
+</div>
+
+<div class="tool-card">
+
+<i class="fa-brands fa-python"></i>
+
+<p>Python</p>
+
+</div>
+
+<div class="tool-card">
+
+<i class="fa-brands fa-aws"></i>
+
+<p>AWS</p>
+
+</div>
+
+<div class="tool-card">
+
+<i class="fa-solid fa-laptop-code"></i>
+
+<p>Postman</p>
+
+</div>
+
+<div class="tool-card">
+
+<i class="fa-solid fa-palette"></i>
+
+<p>Canva</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ================= EXPERIENCE ================= -->
+
+<section class="experience" id="experience">
+
+<div class="container">
+
+<div class="section-heading" data-aos="fade-up">
+
+<h5>MY EXPERIENCE</h5>
+
+<h2>Professional Journey</h2>
+
+<p>Learning through real-world experience.</p>
+
+</div>
+
+<div class="timeline">
+
+<div class="timeline-item" data-aos="fade-right">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-content">
+
+<h3>MERN Stack Developer Intern</h3>
+
+<h4>Zephyr Technologies, Mangalore</h4>
+
+<span>February 2026 - Present</span>
+
+<p>
+
+Worked on responsive web applications using HTML, CSS,
+JavaScript and React.js while collaborating with mentors.
+Gained practical experience in Git, MongoDB,
+Agile Development and Frontend UI implementation.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="timeline-item" data-aos="fade-left">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-content">
+
+<h3>B.E Computer Science & Design</h3>
+
+<h4>Srinivas Institute of Technology</h4>
+
+<span>2023 - 2027</span>
+
+<p>
+
+Current CGPA : <strong>8.51</strong>
+
+Focused on UI/UX Design,
+Frontend Development,
+Artificial Intelligence and Cloud Computing.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= PROJECTS ================= -->
+
+<section class="projects" id="projects">
+
+<div class="container">
+
+<div class="section-heading" data-aos="fade-up">
+
+<h5>FEATURED PROJECTS</h5>
+
+<h2>Projects That Define My Skills</h2>
+
+<p>
+
+A collection of UI/UX designs and development projects
+that demonstrate creativity, problem-solving and technical skills.
+
+</p>
+
+</div>
+
+<div class="project-grid">
+
+
+
+<!-- DrugLens -->
+
+<div class="project-card" data-aos="zoom-in">
+
+<div class="project-icon">
+
+💊
+
+</div>
+
+<h3>DrugLens</h3>
+
+<p>
+
+AI-powered medicine identification platform using
+Python, Flask and Google Gemini AI.
+
+</p>
+
+<div class="tech">
+
+<span>Python</span>
+
+<span>Flask</span>
+
+<span>Gemini AI</span>
+
+<span>HTML</span>
+
+<span>CSS</span>
+
+</div>
+
+<ul>
+
+<li>✔ Medicine Recognition</li>
+
+<li>✔ Barcode Scanner</li>
+
+<li>✔ OCR Support</li>
+
+<li>✔ AI Information</li>
+
+</ul>
+
+<div class="project-buttons">
+
+<a href="https://github.com/SharanyaM2005" target="_blank">
+
+GitHub
+
+</a>
+
+<a href="#">
+
+Case Study
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- HerbLens -->
+
+<div class="project-card" data-aos="zoom-in">
+
+<div class="project-icon">
+
+🌿
+
+</div>
+
+<h3>HerbLens</h3>
+
+<p>
+
+AI medicinal plant identification system with
+Gemini AI integration.
+
+</p>
+
+<div class="tech">
+
+<span>Python</span>
+
+<span>Flask</span>
+
+<span>Gemini AI</span>
+
+</div>
+
+<ul>
+
+<li>✔ Plant Recognition</li>
+
+<li>✔ AI Suggestions</li>
+
+<li>✔ Medical Uses</li>
+
+<li>✔ Image Upload</li>
+
+</ul>
+
+<div class="project-buttons">
+
+<a href="https://github.com/SharanyaM2005" target="_blank">
+
+GitHub
+
+</a>
+
+<a href="#">
+
+Case Study
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- Local Service -->
+
+<div class="project-card" data-aos="zoom-in">
+
+<div class="project-icon">
+
+🏠
+
+</div>
+
+<h3>Local Service Marketplace</h3>
+
+<p>
+
+Full Stack MERN application connecting
+customers and service providers.
+
+</p>
+
+<div class="tech">
+
+<span>React</span>
+
+<span>MongoDB</span>
+
+<span>Express</span>
+
+<span>Node</span>
+
+</div>
+
+<ul>
+
+<li>✔ Authentication</li>
+
+<li>✔ Booking System</li>
+
+<li>✔ Dashboard</li>
+
+<li>✔ Responsive UI</li>
+
+</ul>
+
+<div class="project-buttons">
+
+<a href="https://github.com/SharanyaM2005" target="_blank">
+
+GitHub
+
+</a>
+
+<a href="#">
+
+Live Demo
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- Music -->
+
+<div class="project-card" data-aos="zoom-in">
+
+<div class="project-icon">
+
+🎵
+
+</div>
+
+<h3>Music Player UI</h3>
+
+<p>
+
+Modern music streaming interface designed
+using Figma.
+
+</p>
+
+<div class="tech">
+
+<span>Figma</span>
+
+<span>Prototype</span>
+
+<span>UI Design</span>
+
+</div>
+
+<div class="project-buttons">
+
+<a href="#">
+
+Prototype
+
+</a>
+
+<a href="#">
+
+Case Study
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- Food -->
+
+<div class="project-card" data-aos="zoom-in">
+
+<div class="project-icon">
+
+🍔
+
+</div>
+
+<h3>Food Delivery App</h3>
+
+<p>
+
+Complete food ordering application designed
+using Figma.
+
+</p>
+
+<div class="tech">
+
+<span>Figma</span>
+
+<span>UX</span>
+
+<span>Prototype</span>
+
+</div>
+
+<div class="project-buttons">
+
+<a href="#">
+
+Prototype
+
+</a>
+
+<a href="#">
+
+Case Study
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- Ecommerce -->
+
+<div class="project-card" data-aos="zoom-in">
+
+<div class="project-icon">
+
+🛒
+
+</div>
+
+<h3>E-Commerce UI</h3>
+
+<p>
+
+Modern shopping experience with premium UI.
+
+</p>
+
+<div class="tech">
+
+<span>Figma</span>
+
+<span>UI</span>
+
+<span>Responsive</span>
+
+</div>
+
+<div class="project-buttons">
+
+<a href="#">
+
+Prototype
+
+</a>
+
+<a href="#">
+
+Case Study
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= CERTIFICATIONS ================= -->
+
+<section class="certificates">
+
+<div class="container">
+
+<div class="section-heading">
+
+<h5>CERTIFICATIONS</h5>
+
+<h2>Continuous Learning</h2>
+
+</div>
+
+<div class="certificate-grid">
+
+<div class="certificate">
+
+<i class="fa-brands fa-aws"></i>
+
+<h3>AWS Cloud Practitioner</h3>
+
+<p>Amazon Web Services</p>
+
+</div>
+
+<div class="certificate">
+
+<i class="fa-brands fa-aws"></i>
+
+<h3>AWS Academy</h3>
+
+<p>Data Engineering</p>
+
+</div>
+
+<div class="certificate">
+
+<i class="fa-solid fa-cloud"></i>
+
+<h3>NPTEL</h3>
+
+<p>Cloud Computing</p>
+
+</div>
+
+<div class="certificate">
+
+<i class="fa-solid fa-laptop-code"></i>
+
+<h3>Virtual Internship</h3>
+
+<p>Data Engineering</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ================= ACHIEVEMENTS ================= -->
+
+<section class="achievements">
+
+<div class="container">
+
+<div class="section-heading" data-aos="fade-up">
+
+<h5>ACHIEVEMENTS</h5>
+
+<h2>Milestones</h2>
+
+<p>Some highlights of my academic and professional journey.</p>
+
+</div>
+
+<div class="achievement-grid">
+
+<div class="achievement-card">
+
+<h3>8+</h3>
+
+<p>Projects Completed</p>
+
+</div>
+
+<div class="achievement-card">
+
+<h3>4+</h3>
+
+<p>Industry Certifications</p>
+
+</div>
+
+<div class="achievement-card">
+
+<h3>8.51</h3>
+
+<p>Current CGPA</p>
+
+</div>
+
+<div class="achievement-card">
+
+<h3>1</h3>
+
+<p>Internship Experience</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<div class="section-heading" data-aos="fade-up">
+
+<h5>CONTACT</h5>
+
+<h2>Let's Build Something Amazing Together</h2>
+
+<p>
+
+I'm actively looking for UI/UX Design, Frontend Development,
+
+and Product Design Internship opportunities.
+
+</p>
+
+</div>
+
+<div class="contact-wrapper">
+
+<div class="contact-left">
+
+<div class="contact-card">
+
+<i class="fa-solid fa-envelope"></i>
+
+<h3>Email</h3>
+
+<p>sharanya5325@gmail.com</p>
+
+</div>
+
+<div class="contact-card">
+
+<i class="fa-solid fa-phone"></i>
+
+<h3>Phone</h3>
+
+<p>+91 8547961678</p>
+
+</div>
+
+<div class="contact-card">
+
+<i class="fa-solid fa-location-dot"></i>
+
+<h3>Location</h3>
+
+<p>Kerala, India</p>
+
+</div>
+
+<div class="contact-card">
+
+<i class="fa-brands fa-linkedin"></i>
+
+<h3>LinkedIn</h3>
+
+<a href="https://linkedin.com/in/sharanya-m-b9514532b" target="_blank">
+
+View Profile
+
+</a>
+
+</div>
+
+<div class="contact-card">
+
+<i class="fa-brands fa-github"></i>
+
+<h3>GitHub</h3>
+
+<a href="https://github.com/SharanyaM2005" target="_blank">
+
+SharanyaM2005
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<div class="contact-right">
+
+<form>
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="email" placeholder="Your Email" required>
+
+<input type="text" placeholder="Subject">
+
+<textarea rows="7" placeholder="Write your message"></textarea>
+
+<button type="submit" class="btn">
+
+Send Message
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="container">
+
+<h2>Sharanya M</h2>
+
+<p>
+
+UI/UX Designer • Frontend Developer
+
+</p>
+
+<p>
+
+"Design is not just what it looks like and feels like.
+
+Design is how it works."
+
+</p>
+
+<div class="footer-social">
+
+<a href="https://github.com/SharanyaM2005" target="_blank">
+
+<i class="fab fa-github"></i>
+
+</a>
+
+<a href="https://linkedin.com/in/sharanya-m-b9514532b" target="_blank">
+
+<i class="fab fa-linkedin"></i>
+
+</a>
+
+<a href="mailto:sharanya5325@gmail.com">
+
+<i class="fa-solid fa-envelope"></i>
+
+</a>
+
+</div>
+
+<p>
+
+© 2026 Sharanya M
+
+All Rights Reserved
+
+</p>
+
+</div>
+
+</footer>
+
+
+
+
+
+<!-- ================= BACK TO TOP ================= -->
+
+<button id="topBtn">
+
+<i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+
+
+
+
+<!-- ================= AOS ================= -->
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<!-- ================= Typed JS ================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<!-- ================= JavaScript ================= -->
+
+<script src="script.js"></script>
+
+<script>
+
+AOS.init({
+
+duration:1000,
+
+once:true
+
+});
+
+</script>
+
 </body>
+
 </html>
