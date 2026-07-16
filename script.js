@@ -50,7 +50,7 @@ new Typed(".typing", {
 
     strings: [
 
-        "Frontend Developer ",
+        "Frontend Developer  who has knowledge of flutter and Figma ",
 
         "Figma Designer",
 
