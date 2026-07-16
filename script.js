@@ -50,13 +50,13 @@ new Typed(".typing", {
 
     strings: [
 
-        "UI/UX Designer",
-
-        "Frontend Developer",
+        "Frontend Developer ",
 
         "Figma Designer",
 
-        "Creative Thinker"
+        "Creative Thinker",
+        
+        "Developer",
 
     ],
 
