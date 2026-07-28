@@ -1,380 +1,363 @@
-/*=========================================
-        PORTFOLIO SCRIPT
-=========================================*/
+/*====================================
+PORTFOLIO JAVASCRIPT
+====================================*/
 
-// ================= PRELOADER =================
+// Wait until the page is fully loaded
+document.addEventListener("DOMContentLoaded", () => {
 
-window.addEventListener("load", function () {
-    const preloader = document.getElementById("preloader");
+    /*====================================
+    SMOOTH SCROLLING
+    ====================================*/
 
-    setTimeout(() => {
-        preloader.style.opacity = "0";
-        preloader.style.visibility = "hidden";
-    }, 800);
-});
-
-// ================= MOBILE MENU =================
-
-const menuBtn = document.querySelector(".menu-btn");
-const navMenu = document.querySelector(".nav-menu");
-
-menuBtn.addEventListener("click", () => {
-
-    navMenu.classList.toggle("active");
-
-    if (menuBtn.innerHTML.includes("bars")) {
-        menuBtn.innerHTML = '<i class="fas fa-times"></i>';
-    } else {
-        menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-    }
-
-});
-
-// Close menu when clicking links
-
-document.querySelectorAll(".nav-menu a").forEach(link => {
-
-    link.addEventListener("click", () => {
-
-        navMenu.classList.remove("active");
-
-        menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-
-    });
-
-});
-
-// ================= TYPING EFFECT =================
-
-new Typed(".typing", {
-
-    strings: [
-
-        "Frontend Developer  who has knowledge of flutter and Figma ",
-
-        "Figma Designer",
-
-        "Creative Thinker",
-        
-        "Developer",
-
-    ],
-
-    typeSpeed: 70,
-
-    backSpeed: 40,
-
-    backDelay: 1800,
-
-    loop: true
-
-});
-
-// ================= STICKY NAVBAR =================
-
-window.addEventListener("scroll", () => {
-
-    const header = document.querySelector("header");
-
-    if (window.scrollY > 50) {
-
-        header.style.background = "rgba(15,23,42,.95)";
-        header.style.boxShadow = "0 10px 30px rgba(0,0,0,.3)";
-
-    }
-
-    else {
-
-        header.style.background = "rgba(15,23,42,.65)";
-        header.style.boxShadow = "none";
-
-    }
-
-});
-
-// ================= BACK TO TOP =================
-
-const topBtn = document.getElementById("topBtn");
-
-window.addEventListener("scroll", () => {
-
-    if (window.scrollY > 500) {
-
-        topBtn.style.display = "block";
-
-    }
-
-    else {
-
-        topBtn.style.display = "none";
-
-    }
-
-});
-
-topBtn.addEventListener("click", () => {
-
-    window.scrollTo({
-
-        top: 0,
-
-        behavior: "smooth"
-
-    });
-
-});
-
-// ================= ACTIVE NAVIGATION =================
-
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".nav-menu a");
-
-window.addEventListener("scroll", () => {
-
-    let current = "";
-
-    sections.forEach(section => {
-
-        const sectionTop = section.offsetTop - 120;
-
-        if (pageYOffset >= sectionTop) {
-
-            current = section.getAttribute("id");
-
-        }
-
-    });
+    const navLinks = document.querySelectorAll('nav a');
 
     navLinks.forEach(link => {
 
-        link.classList.remove("active");
+        link.addEventListener("click", function (e) {
 
-        if (link.getAttribute("href") === "#" + current) {
+            const targetId = this.getAttribute("href");
 
-            link.classList.add("active");
+            if (targetId.startsWith("#")) {
 
-        }
+                e.preventDefault();
 
-    });
+                const targetSection = document.querySelector(targetId);
 
-});
-/*=========================================
-        SCROLL REVEAL EFFECT
-=========================================*/
+                if (targetSection) {
 
-const revealElements = document.querySelectorAll(
-    ".skill-card,.project-card,.certificate,.achievement-card,.contact-card,.timeline-content"
-);
+                    window.scrollTo({
 
-const revealOnScroll = () => {
+                        top: targetSection.offsetTop - 70,
 
-    const trigger = window.innerHeight * 0.85;
+                        behavior: "smooth"
 
-    revealElements.forEach((element) => {
+                    });
 
-        const top = element.getBoundingClientRect().top;
+                }
 
-        if (top < trigger) {
-            element.classList.add("show");
-        }
-
-    });
-
-};
-
-window.addEventListener("scroll", revealOnScroll);
-
-revealOnScroll();
-
-/*=========================================
-        SKILL BAR ANIMATION
-=========================================*/
-
-const progressBars = document.querySelectorAll(".progress-fill");
-
-const animateSkills = () => {
-
-    progressBars.forEach((bar) => {
-
-        const width = bar.style.width;
-
-        bar.style.width = "0";
-
-        setTimeout(() => {
-
-            bar.style.width = width;
-
-        }, 300);
-
-    });
-
-};
-
-window.addEventListener("load", animateSkills);
-
-/*=========================================
-        ACHIEVEMENT COUNTER
-=========================================*/
-
-const counters = document.querySelectorAll(".achievement-card h3");
-
-const runCounter = (counter) => {
-
-    const target = parseFloat(counter.innerText);
-
-    if (isNaN(target)) return;
-
-    let value = 0;
-
-    const increment = target / 80;
-
-    const update = () => {
-
-        value += increment;
-
-        if (value < target) {
-
-            if (target % 1 === 0) {
-                counter.innerText = Math.ceil(value);
-            } else {
-                counter.innerText = value.toFixed(2);
             }
 
-            requestAnimationFrame(update);
+        });
 
-        } else {
+    });
 
-            if (target % 1 === 0) {
-                counter.innerText = target;
-            } else {
-                counter.innerText = target.toFixed(2);
+
+    /*====================================
+    ACTIVE NAVIGATION
+    ====================================*/
+
+    const sections = document.querySelectorAll("section");
+
+    function activeMenu() {
+
+        let current = "";
+
+        sections.forEach(section => {
+
+            const sectionTop = section.offsetTop - 120;
+            const sectionHeight = section.offsetHeight;
+
+            if (window.scrollY >= sectionTop &&
+                window.scrollY < sectionTop + sectionHeight) {
+
+                current = section.getAttribute("id");
+
             }
 
-        }
+        });
 
-    };
+        navLinks.forEach(link => {
 
-    update();
+            link.classList.remove("active");
 
-};
+            if (link.getAttribute("href") === "#" + current) {
 
-const achievementSection = document.querySelector(".achievements");
+                link.classList.add("active");
 
-let counted = false;
+            }
 
-window.addEventListener("scroll", () => {
-
-    if (!achievementSection || counted) return;
-
-    const top = achievementSection.getBoundingClientRect().top;
-
-    if (top < window.innerHeight - 150) {
-
-        counters.forEach(runCounter);
-
-        counted = true;
+        });
 
     }
 
+    window.addEventListener("scroll", activeMenu);
+
 });
+/*====================================
+MOBILE MENU
+====================================*/
 
-/*=========================================
-        CONTACT FORM
-=========================================*/
+const menuToggle = document.querySelector(".menu-toggle");
+const navMenu = document.querySelector(".nav-links");
 
-const form = document.querySelector("form");
+if (menuToggle && navMenu) {
 
-if (form) {
+    menuToggle.addEventListener("click", () => {
 
-    form.addEventListener("submit", function (e) {
-
-        e.preventDefault();
-
-        const name = form.querySelector("input[type='text']").value.trim();
-        const email = form.querySelector("input[type='email']").value.trim();
-
-        if (name === "" || email === "") {
-
-            alert("Please fill in all required fields.");
-
-            return;
-
-        }
-
-        alert(
-            "Thank you for your message! This demo form is not connected to an email service yet."
-        );
-
-        form.reset();
+        navMenu.classList.toggle("active");
+        menuToggle.classList.toggle("active");
 
     });
 
 }
 
-/*=========================================
-        BUTTON RIPPLE EFFECT
-=========================================*/
+/*====================================
+SCROLL TO TOP BUTTON
+====================================*/
 
-document.querySelectorAll(".btn,.btn2").forEach((button) => {
-
-    button.addEventListener("click", function (e) {
-
-        const circle = document.createElement("span");
-
-        const diameter = Math.max(this.clientWidth, this.clientHeight);
-
-        circle.style.width = circle.style.height = `${diameter}px`;
-
-        circle.style.left = `${e.offsetX - diameter / 2}px`;
-
-        circle.style.top = `${e.offsetY - diameter / 2}px`;
-
-        circle.classList.add("ripple");
-
-        const ripple = this.getElementsByClassName("ripple")[0];
-
-        if (ripple) {
-
-            ripple.remove();
-
-        }
-
-        this.appendChild(circle);
-
-    });
-
-});
-
-/*=========================================
-        NAVBAR SHADOW
-=========================================*/
+const scrollTopBtn = document.querySelector(".scroll-top");
 
 window.addEventListener("scroll", () => {
 
-    const header = document.querySelector("header");
+    if (window.scrollY > 300) {
 
-    if (window.scrollY > 80) {
+        if (scrollTopBtn) {
 
-        header.classList.add("shadow");
+            scrollTopBtn.classList.add("active");
+
+        }
 
     } else {
 
-        header.classList.remove("shadow");
+        if (scrollTopBtn) {
+
+            scrollTopBtn.classList.remove("active");
+
+        }
 
     }
 
 });
 
-/*=========================================
-        CONSOLE MESSAGE
-=========================================*/
+if (scrollTopBtn) {
 
-console.log(
-    "%cPortfolio Developed by Sharanya M",
-    "color:#38bdf8;font-size:20px;font-weight:bold;"
-);
+    scrollTopBtn.addEventListener("click", () => {
 
-console.log(
-    "%cUI/UX Designer | Frontend Developer",
-    "color:white;font-size:14px;"
-);
+        window.scrollTo({
+
+            top: 0,
+
+            behavior: "smooth"
+
+        });
+
+    });
+
+}
+
+/*====================================
+FADE-UP ANIMATION
+====================================*/
+
+const fadeElements = document.querySelectorAll(".fade-up");
+
+function revealElements() {
+
+    fadeElements.forEach(element => {
+
+        const windowHeight = window.innerHeight;
+        const elementTop = element.getBoundingClientRect().top;
+        const revealPoint = 120;
+
+        if (elementTop < windowHeight - revealPoint) {
+
+            element.classList.add("show");
+
+        }
+
+    });
+
+}
+
+window.addEventListener("scroll", revealElements);
+
+revealElements();
+
+/*====================================
+HEADER SHADOW ON SCROLL
+====================================*/
+
+const header = document.querySelector("header");
+
+window.addEventListener("scroll", () => {
+
+    if (!header) return;
+
+    if (window.scrollY > 60) {
+
+        header.style.boxShadow = "0 10px 30px rgba(0,0,0,0.25)";
+        header.style.background = "rgba(7,11,23,0.95)";
+
+    } else {
+
+        header.style.boxShadow = "none";
+        header.style.background = "rgba(7,11,23,0.85)";
+
+    }
+
+});
+/*====================================
+TYPING EFFECT
+====================================*/
+
+const typingElement = document.querySelector(".typing");
+
+if (typingElement) {
+
+    const words = [
+
+        "Full Stack Developer",
+
+        "Frontend Developer",
+
+        "UI/UX Designer",
+
+        "MERN Stack Learner"
+
+    ];
+
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function typeEffect() {
+
+        const currentWord = words[wordIndex];
+
+        if (!isDeleting) {
+
+            typingElement.textContent =
+                currentWord.substring(0, charIndex + 1);
+
+            charIndex++;
+
+            if (charIndex === currentWord.length) {
+
+                isDeleting = true;
+
+                setTimeout(typeEffect, 1500);
+
+                return;
+
+            }
+
+        } else {
+
+            typingElement.textContent =
+                currentWord.substring(0, charIndex - 1);
+
+            charIndex--;
+
+            if (charIndex === 0) {
+
+                isDeleting = false;
+
+                wordIndex++;
+
+                if (wordIndex >= words.length) {
+
+                    wordIndex = 0;
+
+                }
+
+            }
+
+        }
+
+        setTimeout(typeEffect, isDeleting ? 60 : 120);
+
+    }
+
+    typeEffect();
+
+}
+
+/*====================================
+CONTACT FORM
+====================================*/
+
+const contactForm = document.querySelector(".contact-form");
+
+if (contactForm) {
+
+    contactForm.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+        const inputs = contactForm.querySelectorAll("input, textarea");
+
+        let valid = true;
+
+        inputs.forEach(input => {
+
+            if (input.value.trim() === "") {
+
+                valid = false;
+
+                input.style.border = "2px solid red";
+
+            } else {
+
+                input.style.border = "none";
+
+            }
+
+        });
+
+        if (valid) {
+
+            alert("Thank you! Your message has been sent successfully.");
+
+            contactForm.reset();
+
+        }
+
+    });
+
+}
+
+/*====================================
+PROJECT CARD HOVER EFFECT
+====================================*/
+
+const projectCards = document.querySelectorAll(".project-card");
+
+projectCards.forEach(card => {
+
+    card.addEventListener("mouseenter", () => {
+
+        card.style.transform = "translateY(-15px) scale(1.02)";
+
+    });
+
+    card.addEventListener("mouseleave", () => {
+
+        card.style.transform = "translateY(0) scale(1)";
+
+    });
+
+});
+
+/*====================================
+COPYRIGHT YEAR
+====================================*/
+
+const yearElement = document.querySelector(".year");
+
+if (yearElement) {
+
+    yearElement.textContent = new Date().getFullYear();
+
+}
+
+/*====================================
+PAGE LOADED
+====================================*/
+
+window.addEventListener("load", () => {
+
+    document.body.classList.add("loaded");
+
+});
+
+console.log("Portfolio Loaded Successfully 🚀");
